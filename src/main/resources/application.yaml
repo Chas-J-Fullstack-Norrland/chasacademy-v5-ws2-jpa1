@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: blog
+  datasource:
+    url: jdbc:postgresql://localhost:5432/blogg_db
+    username: postgres
+    password: postgres
+logging:
+  level:
+    root: WARN
