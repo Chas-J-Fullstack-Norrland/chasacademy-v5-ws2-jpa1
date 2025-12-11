@@ -17,7 +17,7 @@ public class CommentService {
         Comment comment = new Comment();
         comment.setPost(post);
         comment.setTitle(title);
-        comment.setComment(commentText);
+        comment.setComment_text(commentText);
         return commentRepository.save(comment);
     }
 }
