@@ -10,7 +10,7 @@ import java.util.Optional;
 
 @SpringBootApplication
 public class BlogApplication implements CommandLineRunner {
-	private PostRepository postRepository;
+	private final PostRepository postRepository;
 
 	public BlogApplication(PostRepository postRepository) {
 		this.postRepository = postRepository;
@@ -28,9 +28,7 @@ public class BlogApplication implements CommandLineRunner {
 		}
 
 		Optional<Post> firstPost = postRepository.findById(1L);
-		if (firstPost.isPresent()) {
-			Post first = firstPost.get();
-			System.out.println("title: " + first.getTitle() + " published at: " + first.getPublishDate());
-		}
+        firstPost
+                .ifPresent(first -> System.out.println("title: " + first.getTitle() + " published at: " + first.getPublishDate()));
 	}
 }
