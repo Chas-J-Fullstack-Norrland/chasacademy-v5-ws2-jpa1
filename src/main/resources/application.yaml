@@ -2,9 +2,9 @@ spring:
   application:
     name: blog
   datasource:
-    url: jdbc:postgresql://localhost:5432/blogg_db
+    url: jdbc:postgresql://localhost:5432/blogg_dbV2
     username: postgres
-    password: postgres
+    password: pass
 logging:
   level:
     root: WARN
