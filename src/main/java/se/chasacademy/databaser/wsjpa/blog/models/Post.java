@@ -14,6 +14,19 @@ public class Post {
     @Column
     private LocalDateTime publishDate, createDate;
 
+    public Post (){
+        publishDate = LocalDateTime.now();
+        createDate = LocalDateTime.now();
+    }
+
+    public Post(String title, String posttest, String author){
+
+        this.title = title; this.posttext = posttest; this.author = author;
+
+        publishDate = LocalDateTime.now();
+        createDate = LocalDateTime.now();
+    }
+
     public int getPostId() {
         return postId;
     }
