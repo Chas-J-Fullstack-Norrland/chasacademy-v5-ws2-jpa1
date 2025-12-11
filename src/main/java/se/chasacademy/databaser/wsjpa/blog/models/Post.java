@@ -3,12 +3,13 @@ package se.chasacademy.databaser.wsjpa.blog.models;
 import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 public class Post {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int postId;
+    private Long postId;
     @Column
     private String title, posttext, author;
     @Column
@@ -31,7 +32,7 @@ public class Post {
         return postId;
     }
 
-    public void setPostId(int postId) {
+    public void setPostId(Long postId) {
         this.postId = postId;
     }
 
